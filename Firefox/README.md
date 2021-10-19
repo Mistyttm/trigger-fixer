@@ -1,4 +1,4 @@
-# trigger-fixer
+# Trigger fixer
 
 Yeah, I'm doing this now. This is a chrome extension that allows you to:
 * input words that may cause you upset, and choose what to replace them with
