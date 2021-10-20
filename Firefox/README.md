@@ -9,6 +9,9 @@ Pretty cool, right?
 
 Emmey contributed a bunch behind the scenes, everyone say thank you Emmey
 
+## Public releases
+[Firefox addon store](https://addons.mozilla.org/en-US/firefox/addon/trigger-fixer/)
+
 
 ## Security Policy
 
