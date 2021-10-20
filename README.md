@@ -20,3 +20,7 @@ Trigger Fixer was started by EchoDevG as a Google Chrome extension to help those
 | ------ | ------ |
 | Google Chrome | v0.1.0.0 |
 | Firefox | v0.1.0.1 |
+| Safari | :x: |
+| Edge | :x: |
+| Internet Explorer | :x: |
+| Opera | :x: |
