@@ -28,13 +28,13 @@ chrome.storage.sync.get([
     //if there is anything in storage, set variables to that value
     if (result.replaceThis !== undefined) {
         replaceThisCommaDel = result.replaceThis
-    };
+    }
     if (result.replaceWith !== undefined) {
         replaceWithCommaDel = result.replaceWith
-    };
+    }
 	if (result.refreshMs !== undefined) {
         refreshRate = result.refreshMs
-    };
+    }
 
     //remove commas from the start and end, for comma delimitated string to array conversion
     replaceThisCommaDel = replaceThisCommaDel.substring(1);
@@ -52,7 +52,7 @@ chrome.storage.sync.get([
 
     //for every item in the array, run the function
     function rep(){
-		for (i = 0; i < length; i++) {
+		for (let i = 0; i < length; i++) {
 
 			replaceThisWord = replaceThisArr[i];
 			replaceWithWord = replaceWithArr[[i]];
@@ -64,26 +64,27 @@ chrome.storage.sync.get([
     function replaceWords(replaceThisText, ReplaceWithText) {
 
         //create the regex
-        re = new RegExp(`\\b${replaceThisText}\\b`, 'gi');
+        var re = new RegExp(`\\b${replaceThisText}\\b`, 'gi');
 
         //if there is something to check
         if (replaceThisText !== "") {
 
             //look at everythign
+            //let value of elements
             for (var i = 0; i < elements.length; i++) {
                 var element = elements[i];
 
                 for (var j = 0; j < element.childNodes.length; j++) {
                     var node = element.childNodes[j];
 
-                    //and replace anything that matches the regex with the new string
+
                     if (node.nodeType === 3) {
 						
 						var text = node.nodeValue;
 						var replacedText = text.replace(re, String(ReplaceWithText), '<div id="DONOTREPLACE">');
 						
 						if (replacedText !== text) {
-							//element.replaceChild(document.createTextNode(replacedText), node);
+
 							element.innerHTML = replacedText;
 						}
 						
