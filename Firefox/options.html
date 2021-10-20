@@ -4,7 +4,7 @@
 		<title>Trigger Fixer Options</title>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="CSS/options_light.css">
+		<link rel="stylesheet" href="CSS/options.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -20,8 +20,15 @@
 					<h3>A fix for all your triggers</h3>
 					<div id="border">
 						<div id=help class="tooltip">
-							<i class="fa fa-question-circle tooltipbutton"></i>
+							<em class="fa fa-question-circle tooltipbutton"></em>
 							<span class="tooltiptext">Input your triggering word in the first box, then add the<br>word you want to replace your triggering word with in<br>the second box</span>
+						</div>
+						<div class="rightSwitch">
+							<label class="switch">
+  								<input type="checkbox">
+  								<span class="slideswitch round"></span>
+							</label>
+							<script src="JS/theme.js"></script>
 						</div>
 						<br><br><br>
 						<form>
@@ -42,7 +49,7 @@
 
 						<p id="p1">Trigger list:</p>
 						<div id="div1">
-							<input type="text" id="search" placeholder="Search for names..">
+							<!--<input type="text" id="search" placeholder="Search for names..">-->
 							<ul id="List">
 							</ul>
 						</div>
