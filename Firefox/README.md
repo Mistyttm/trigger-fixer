@@ -20,7 +20,8 @@ Emmey contributed a bunch behind the scenes, everyone say thank you Emmey
 | Version | Supported          |
 | ------- | ------------------ |
 | 0.1.0.0 | :x:                |
-| 0.1.0.1 | :white_check_mark: |
+| 0.1.0.1 | :x:                |
+| 0.1.1.0 | :white_check_mark: |
 
 ### Reporting a Vulnerability
 
