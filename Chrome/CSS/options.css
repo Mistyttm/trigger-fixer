@@ -1,8 +1,30 @@
+:root {
+  --bg-colour: #ffffff;
+  --font-colour: #000000;
+  --secondary-font-colour: #ffffff;
+  --primary-colour: #d48383;
+  --secondary-colour: #763232;
+  --button-colour: #522222;
+  --primary-shadow-colour: rgba(0,0,0,0.19);
+  --secondary-shadow-colour: rgba(0,0,0,0.23);
+}
+
+[data-theme="dark"] {
+  --bg-colour: #100f1b;
+  --font-colour: #ffffff;
+  --secondary-font-colour: #ffffff;
+  --primary-colour: #d48383;
+  --secondary-colour: #763232;
+  --button-colour: #522222;
+  --primary-shadow-colour: rgba(255, 255, 255, 0.171);
+  --secondary-shadow-colour: rgba(255, 255, 255, 0.363);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--bg-colour);
+  color: var(--font-colour);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -31,8 +53,11 @@ body {
 #border {
 	margin: auto;
 	width: 25%;
-	border: 2px solid #763232;
+	border: 2px solid var(--secondary-colour);
 	border-radius: 8px;
+  background-color: var(--primary-colour);
+  color: var(--secondary-font-colour) !important;
+  box-shadow: 0 10px 20px var(--primary-shadow-colour), 0 6px 6px var(--secondary-shadow-colour);
 }
 
 #help{
@@ -48,7 +73,7 @@ body {
 }
 
 .button {
-  background-color: #763232;
+  background-color: var(--secondary-colour);
   border: none;
   color: white;
   padding: 8px 32px;
@@ -64,16 +89,16 @@ body {
 .button1 {
   background-color: white; 
   color: black; 
-  border: 2px solid #763232;
+  border: 2px solid var(--secondary-colour);
 }
 
 .button1:hover {
-  background-color: #522222;
+  background-color: var(--button-colour);
   color: white;
 }
 
 .buttona {
-  background-color: #763232;
+  background-color: var(--secondary-colour);
   border: none;
   color: white;
   padding: 4px 16px;
@@ -89,23 +114,23 @@ body {
 .button2 {
   background-color: white; 
   color: black; 
-  border: 2px solid #763232;
+  border: 2px solid var(--secondary-colour);
 }
 
 .button2:hover {
-  background-color: #522222;
+  background-color: var(--button-colour);
   color: white;
 }
 
 input[type=text] {
-	width: 75%%;
+	width: 75%;
 	padding: 8px 20px;
 	margin: 10px 0;
 	box-sizing: border-box;
 }
 
 input[type=text]:focus {
-  border: 3px solid #763232;
+  border: 3px solid var(--secondary-colour);
 }
 
 .tooltip {
@@ -114,15 +139,20 @@ input[type=text]:focus {
   border-bottom: 1px dotted black;
 }
 
+.tooltipbutton {
+  font-size:24px;
+  color: var(--secondary-font-colour);
+}
+
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 400px;
-  background-color: #522222;
+  background-color: var(--secondary-colour);
   color: #fff;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
- 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.19), 0 12px 12px rgba(0,0,0,0.23);
   position: absolute;
   z-index: 1;
   top: 100%;
@@ -142,7 +172,7 @@ input[type=text]:focus {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent #522222 transparent;
+  border-color: transparent transparent var(--button-colour) transparent;
 }
 
 .tooltip .tooltiptext {
@@ -194,3 +224,79 @@ input[type=text]:focus {
   background: #522222;
   cursor: pointer;
 }
+
+#List {
+	/* Remove default list styling */
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.rightSwitch {
+  float: right;
+}
+
+ /* The switch - the box around the slider */
+ .switch {
+  position: relative;
+  top: 10px;
+  right: 5px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slideswitch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slideswitch:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slideswitch {
+  background-color: #522222;
+}
+
+input:focus + .slideswitch {
+  box-shadow: 0 0 1px #522222;
+}
+
+input:checked + .slideswitch:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slideswitch.round {
+  border-radius: 34px;
+}
+
+.slideswitch.round:before {
+  border-radius: 50%;
+} 
