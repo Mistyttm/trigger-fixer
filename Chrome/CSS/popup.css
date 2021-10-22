@@ -1,14 +1,44 @@
+:root {
+  --bg-colour: #100f1b;
+  --primary-colour: #763232;
+  --secondary-colour: #522222;
+  --text-colour: #ffffff;
+  --button-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-colour: #ffffff;
+  --primary-colour: #763232;
+  --secondary-colour: #522222;
+  --text-colour: #ffffff;
+  --button-bg: #8a8a8a;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-  background-color: #000000;
+  background-color: var(--bg-colour);
     font-family: 'Poppins', sans-serif;
+	width: 100%;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+}
+
+#centreT {
+	background-color: var(--bg-colour);
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .button {
-  background-color: #763232;
+  background-color: var(--primary-colour);
   border: none;
-  color: white;
+  color: var(--text-colour);
   height: 50px;
   padding: 8px 50px;
   text-align: center;
@@ -22,12 +52,12 @@ body {
 }
 
 .button1 {
-  background-color: white; 
+  background-color: var(--button-bg); 
   color: black; 
-  border: 2px solid #763232;
+  border: 2px solid var(--primary-colour);
 }
 
 .button1:hover {
-  background-color: #522222;
-  color: white;
+  background-color: var(--secondary-colour);
+  color: #ffffff;
 }
