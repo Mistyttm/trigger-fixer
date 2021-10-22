@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Trigger Fixer Options</title>
+		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="CSS/options.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,8 +20,15 @@
 					<h3>A fix for all your triggers</h3>
 					<div id="border">
 						<div id=help class="tooltip">
-							<i class="fa fa-question-circle" style="font-size:24px;color:#763232"></i>
+							<em class="fa fa-question-circle tooltipbutton"></em>
 							<span class="tooltiptext">Input your triggering word in the first box, then add the<br>word you want to replace your triggering word with in<br>the second box</span>
+						</div>
+						<div class="rightSwitch">
+							<label class="switch">
+  								<input type="checkbox">
+  								<span class="slideswitch round"></span>
+							</label>
+							<script src="JS/theme.js"></script>
 						</div>
 						<br><br><br>
 						<form>
@@ -30,10 +38,10 @@
 						  
 						  <label for="replaceWith">Replace with:</label><br>
 						  <input type="text" id="replaceWith" name="replaceWith" value=""><br>
-
+						  
 						  <input type="submit" value="Submit" id="submit" class="button button1">
 						  
-						  <script src="JS/options.js"></script>
+						  
 
 						</form>
 
@@ -41,10 +49,13 @@
 
 						<p id="p1">Trigger list:</p>
 						<div id="div1">
-							
+							<!--<input type="text" id="search" placeholder="Search for names..">-->
+							<ul id="List">
+							</ul>
 						</div>
+						<script src="JS/options.js"></script>
 						
-						<div class="slidecontainer">
+						<div class="slidecontainer" id="slider">
 						  <input type="range" id="myRange" min="500" max="5000" value="50" class="slider">
 						  <p>Refresh Rate: <span id="demo"></span>ms</p>
 						</div>
