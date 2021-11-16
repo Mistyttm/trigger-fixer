@@ -7,4 +7,4 @@ Yeah, I'm doing this now. This is a chrome extension that allows you to:
 
 Pretty cool, right?
 
-Emmey contributed a bunch behind the scenes, everyone say thank you Emmey
+Emmey contributed a bunch, and did the whole firefox port so yeah everyone say thank you to Emmey
