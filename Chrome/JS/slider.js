@@ -1,13 +1,23 @@
+chrome.storage.sync.get([
+	'refreshMs'
+]), function(result) {
+    //if there is anything in storage, set variables to that value
+	if (result.refreshMs !== undefined) {
+        var refreshRate = result.refreshMs;
+    };
+}
+
+
 var slider = document.getElementById("myRange");
+slider.value=refreshRate;
 var output = document.getElementById("demo");
-var refreshRate;
 var x = document.getElementById("myRange").value;
 output.innerHTML = slider.value;
 
 slider.oninput = function() {
 	output.innerHTML = this.value;
 	console.log(slider.value);
-	refreshRate = slider.value
+	refreshRate = slider.value;
 	
 	chrome.storage.sync.set({
             'refreshMs': refreshRate
