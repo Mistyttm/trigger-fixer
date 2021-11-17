@@ -7,7 +7,7 @@ Yeah, I'm doing this now. This is a chrome extension that allows you to:
 
 Pretty cool, right?
 
-Emmey contributed a bunch behind the scenes, everyone say thank you Emmey
+I, Emmey, have ported the whole thing to firefox as well as contributed stuff behind the scenes and redesigned all the CSS :)
 
 ## Public releases
 [Firefox addon store](https://addons.mozilla.org/en-US/firefox/addon/trigger-fixer/)
