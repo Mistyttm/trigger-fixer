@@ -9,10 +9,11 @@ chrome.storage.sync.get([
 
 
 var slider = document.getElementById("myRange");
-slider.value=refreshRate;
 var output = document.getElementById("demo");
 var x = document.getElementById("myRange").value;
 output.innerHTML = slider.value;
+
+slider.value=refreshRate;
 
 slider.oninput = function() {
 	output.innerHTML = this.value;
