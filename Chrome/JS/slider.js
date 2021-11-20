@@ -13,12 +13,13 @@ var output = document.getElementById("demo");
 var x = document.getElementById("myRange").value;
 output.innerHTML = slider.value;
 
-slider.value=refreshRate;
+output.innerHTML=refreshRate;
 
 slider.oninput = function() {
 	output.innerHTML = this.value;
 	console.log(slider.value);
 	refreshRate = slider.value;
+	console.log(refreshRate);
 	
 	chrome.storage.sync.set({
             'refreshMs': refreshRate
