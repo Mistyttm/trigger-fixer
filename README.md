@@ -12,7 +12,7 @@ Trigger Fixer was started by EchoDevG as a Google Chrome extension to help those
 
 ## What can you do with this source code
 
-[TBD]
+The code is free and open source. If you are going to use it, however, please credit Echo and Emmey.
 
 ## Supported browsers
 
